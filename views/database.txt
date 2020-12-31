@@ -1,0 +1,26 @@
+CREATE DATABASE npms DEFAULT CHARACTER SET utf8;
+
+GRANT ALL ON npms.* TO 'sam'@'localhost' IDENTIFIED BY '1342';
+
+CREATE TABLE user (
+ 	user_id INTEGER NOT NULL AUTO_INCREMENT,
+  	name VARCHAR(255),
+    email VARCHAR(255),
+    phone INTEGER,
+    password VARCHAR(255),
+    role INTEGER,
+  PRIMARY KEY(user_id)
+) ENGINE = InnoDB;
+
+CREATE TABLE News (
+ 	news_id INTEGER NOT NULL AUTO_INCREMENT,
+  	title VARCHAR(255),
+    description VARCHAR(255),
+    likes INTEGER,
+    dislike INTEGER,
+    comment VARCHAR(255),
+    dates varchar(255),
+    status INTEGER
+  PRIMARY KEY(news_id)
+) ENGINE = InnoDB;
+
