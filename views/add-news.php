@@ -37,9 +37,9 @@ if(isset($_POST['Add'])){
     $date=$_POST['date'];
     try{
       $sql = "INSERT INTO news (section,title, description, likes, dislikes, dates, status)
-                          VALUES  ('".$section."','".$title."','".$description."', $likes, $dislikes,'".$date."', 0)";
+              VALUES  ('".$section."','".$title."','".$description."', $likes, $dislikes,'".$date."', 0)";
       $stmt = $mysqli->query($sql);
-      
+
       $_SESSION["success"] = "News Requested to Published Successfully.";
       header("Location: publisher-home.php");
       return;

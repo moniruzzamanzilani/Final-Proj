@@ -10,6 +10,7 @@ if(!isset($_SESSION['account']) || $_SESSION['role'] != 1){
 if(isset($_POST['logout'])){
   header('Location:logout.php');
   return;
+
 }
 if(isset($_POST['add'])){
   header('Location:add.php');
@@ -107,7 +108,7 @@ try{
 </div>
 
 <div class="footer">
-<p>copyright@2020 really news</p>
+<p>copyright@2020 Zilani</p>
 </div>
 <script>
 
@@ -125,7 +126,7 @@ function showmyuser() {
 		 document.getElementById("mytext").innerHTML = this.status;
 	}
   };
-  xhttp.open("POST", "/samtest/getuser.php", true);
+  xhttp.open("POST", "getuser.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("uname="+uname);
 

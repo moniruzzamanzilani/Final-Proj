@@ -1,3 +1,4 @@
+
 <?php
 require_once "mysqli.php";
 session_start();
@@ -53,30 +54,7 @@ if(isset($_POST['login'])){
               $_SESSION["role"] = $row["role"];
               $_SESSION["success"] = "Logged in.";
               header("Location: admin-home.php");
-              error_log("Login success ".$_POST['email']);
-              return;
-            }
-            else if($row['role'] == 2){
-              $_SESSION["account"] = $_POST["email"];
-              $_SESSION["role"] = $row["role"];
-              $_SESSION["success"] = "Logged in.";
-              header("Location: publisher-home.php");
-              error_log("Login success ".$_POST['email']);
-              return;
-            }
-            else if($row['role'] == 3){
-              $_SESSION["account"] = $_POST["email"];
-              $_SESSION["role"] = $row["role"];
-              $_SESSION["success"] = "Logged in.";
-              header("Location: auditor-home.php");
-              error_log("Login success ".$_POST['email']);
-              return;
-            }
-            else{
-              $_SESSION["account"] = $_POST["email"];
-              $_SESSION["role"] = $row["role"];
-              $_SESSION["success"] = "Logged in.";
-              header("Location: reader-section.php");
+               setcookie('alogin','true', time()+60,'/');
               error_log("Login success ".$_POST['email']);
               return;
             }
@@ -104,11 +82,11 @@ if(isset($_POST['login'])){
 <div class="topnav">
 <a href="index.php">Main Page</a>
 <!-- <a href="conf-signup.php">Sign up As Admin</a> -->
-<a href="signup-reader.php">Sign up Page</a>
+
 </div>
 </div>
 <div class="footer">
-<p>copyright@2020 really news</p>
+<p>copyright@2020 Zilani</p>
 </div>
  <!-- <body style="margin:20px;">
  <div class="container">

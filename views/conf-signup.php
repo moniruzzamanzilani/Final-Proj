@@ -41,9 +41,9 @@ if(isset($_POST['confirm'])){
    </head>
    <body style="margin:20px;">
      <body>
-     
+
    <link rel="stylesheet" type="text/css" href="style.css">
-     
+
      <div class="header">
      <h1> Admin Confirmation </h1>
 </div>
@@ -58,7 +58,7 @@ if(isset($_POST['confirm'])){
 </div>
      </form>
 
- 
+
      <?php
 
        if ( isset($_SESSION["success"]) ) {

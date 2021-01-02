@@ -1,4 +1,4 @@
-<?php
+hp
 require_once "mysqli.php";
 session_start();
 if(!isset($_SESSION['account']) || $_SESSION['role'] != 2){
